@@ -84,6 +84,12 @@ const BedHeadTicket = () => {
         >
           C-Section Audit
         </button>
+        <button 
+          onClick={() => navigate('/prescription')} 
+          className="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-2 px-3 rounded shadow text-xs md:text-sm"
+        >
+          Prescription
+        </button>
       </div>
       
       {/* Print Button - Hidden when printing */}

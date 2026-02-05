@@ -12,6 +12,7 @@ import PatientRecordChart from './components/patientRecord.jsx'
 import SisterNote from './components/sisterNote.jsx'
 import InputOutputChart from './components/inputOutput.jsx'
 import CesareanSectionAudit from './components/audit.jsx'
+import PrescriptionPad from './components/prescription.jsx'
 
 
 
@@ -36,6 +37,7 @@ function App() {
           <Route path="/sisterNote" element={<SisterNote />} />
           <Route path="/inputOutputChart" element={<InputOutputChart />} />
           <Route path="/cesareanSectionAudit" element={<CesareanSectionAudit />} />
+          <Route path="/prescription" element={<PrescriptionPad />} />
 
         </Routes>
       </div>

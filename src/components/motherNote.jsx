@@ -20,23 +20,27 @@ const MotherNote = () => {
 
       {/* ======================= MOTHER NOTE PAGE ======================= */}
       {/* A4 Container - Fixed dimensions for perfect print */}
-      <div className="w-[210mm] h-[297mm] bg-white shadow-xl p-8 relative print:shadow-none print:w-[210mm] print:h-[297mm] print:p-8 text-black print:mb-0 overflow-hidden box-border mx-auto">
+      <div className="w-[210mm] h-[297mm] bg-white shadow-xl p-4 relative print:shadow-none print:w-[210mm] print:h-[297mm] print:p-4 text-black print:mb-0 overflow-hidden box-border mx-auto">
         
-        {/* Inner Border Frame */}
-        <div className="w-full h-full border-2 border-black p-6 flex flex-col">
+        {/* Outer Border */}
+        <div className="w-full h-full border-2 border-black p-3">
           
-          {/* Header */}
-          <div className="text-center">
-            <h1 className="text-xl md:text-2xl font-extrabold uppercase tracking-wide text-blue-700">
-              MOTHER NOTE
-            </h1>
-          </div>
+          {/* Inner Border Frame */}
+          <div className="w-full h-full border-2 border-black p-6 flex flex-col">
+          
+            {/* Header */}
+            <div className="text-center">
+              <h1 className="text-xl md:text-2xl font-extrabold uppercase tracking-wide text-blue-700">
+                MOTHER NOTE
+              </h1>
+            </div>
 
-          {/* The rest of the page is intentionally left blank */}
-          <div className="flex-grow">
-             {/* Blank space for handwritten notes */}
-          </div>
+            {/* The rest of the page is intentionally left blank */}
+            <div className="flex-grow">
+              {/* Blank space for handwritten notes */}
+            </div>
 
+          </div>
         </div>
       </div>
 

@@ -36,17 +36,17 @@ const BabyTicket = () => {
               <span className="font-bold text-sm w-24">TIME</span>
               <span className="font-bold text-sm mr-2">:-</span>
               {/* Fixed width line */}
-              <div className="w-64 border-b border-black border-dotted h-4"></div>
+              <div className="w-64 "></div>
             </div>
             <div className="flex items-end">
               <span className="font-bold text-sm w-24">SEX</span>
               <span className="font-bold text-sm mr-2">:-</span>
-              <div className="w-64 border-b border-black border-dotted h-4"></div>
+              <div className="w-64 "></div>
             </div>
             <div className="flex items-end">
               <span className="font-bold text-sm w-24">WEIGHT</span>
               <span className="font-bold text-sm mr-2">:-</span>
-              <div className="w-64 border-b border-black border-dotted h-4"></div>
+              <div className="w-64 "></div>
             </div>
           </div>
 
@@ -60,7 +60,7 @@ const BabyTicket = () => {
           {/* AP Score */}
           <div className="flex items-end mb-10 pl-2">
             <span className="font-bold text-sm mr-2">AP SCORE :-</span>
-            <div className="w-64 border-b border-black border-dotted h-4"></div>
+            <div className="w-64 "></div>
           </div>
 
           {/* Management Section */}
@@ -83,7 +83,7 @@ const BabyTicket = () => {
               {/* Immunization Sentence with Inline Blank */}
               <div className="leading-loose">
                 <span>0 birth dose immunisation to be given on dt-</span>
-                <span className="inline-block w-32 border-b border-black border-dotted mx-2"></span>
+                <span className="inline-block w-32 "></span>
                 <span>at chc barpali immunisation</span>
                 <br />
                 <span>center</span>

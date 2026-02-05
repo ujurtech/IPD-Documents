@@ -18,11 +18,6 @@ const BedHeadTicket = () => {
       
       {/* Navigation Buttons - Hidden when printing */}
       <div className="fixed top-5 left-5 print:hidden z-50 flex flex-wrap gap-2 max-w-xs">
-        <button onClick={() => navigate('/bedHeadTicket')} className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-3 rounded shadow text-xs md:text-sm">Bed Head Ticket</button>
-        {/* ... other buttons ... */}
-      </div>
-            {/* Navigation Buttons - Hidden when printing */}
-      <div className="fixed top-5 left-5 print:hidden z-50 flex flex-wrap gap-2 max-w-xs">
         <button 
           onClick={() => navigate('/bedHeadTicket')} 
           className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-3 rounded shadow text-xs md:text-sm"
@@ -105,11 +100,11 @@ const BedHeadTicket = () => {
       <div className="w-[210mm] min-h-[297mm] bg-white shadow-xl p-8 md:p-10 relative flex flex-col print:shadow-none print:w-full print:h-[297mm] print:p-6 text-black print:mb-0">
         
         {/* Header Section */}
-        <div className="flex items-center border-b-2 border-green-700 pb-2 mb-2">
+        <div className="flex items-center border-b-2 border-green-700 pb-2 mb-4">
           <div className="w-20 mr-4 flex-shrink-0">
             <img src={logo} alt="Hospital Logo" className="w-full h-auto object-contain" />
           </div>
-          <div className="text-center">
+          <div className="text-center flex-1">
             <h1 className="text-red-700 text-2xl md:text-3xl font-extrabold uppercase m-0 leading-tight">
               Ramakrushna Nursing Home
             </h1>
@@ -123,8 +118,8 @@ const BedHeadTicket = () => {
         </div>
 
         {/* Top Section: Patient Info & Discharge */}
-        <div className="flex gap-6 mb-2">
-          <div className="w-2/3 space-y-1">
+        <div className="flex gap-6 mb-4">
+          <div className="w-2/3 space-y-2">
             <div className="flex items-end">
               <span className="font-bold text-sm whitespace-nowrap mr-2">Patient name-</span>
               {/* <div className="flex-grow border-b border-black h-5"></div> */}
@@ -137,44 +132,51 @@ const BedHeadTicket = () => {
               <span className="font-bold text-sm whitespace-nowrap mr-2">Age/Sex-</span>
               {/* <div className="flex-grow border-b border-black h-5"></div> */}
             </div>
-            <div className="mt-1">
-              <span className="block font-bold text-sm mb-0.5 text-left">Address-</span>
-              {/* <div className="w-full border border-gray-400 h-12"></div> */}
+            <div className="mt-2">
+              <span className="block font-bold text-sm mb-1 text-left">Address-</span>
+              {/* <div className="w-full border border-gray-400 h-16"></div> */}
             </div>
           </div>
 
-          <div className="w-1/3 flex flex-col justify-between">
+          <div className="w-1/3 flex flex-col">
             <div className="flex items-end mb-2">
               <span className="font-bold text-sm whitespace-nowrap mr-2">Cause of Discharge -</span>
               {/* <div className="flex-grow border-b border-black h-5"></div> */}
-            </div>
-            <div className="text-center mt-auto">
-              <span className="text-xs font-bold block">Signature of Medical Officer</span>
             </div>
           </div>
         </div>
 
         {/* Admission Details */}
-        <div className="space-y-1 mb-4">
+        <div className="space-y-2 mb-3">
           <div className="flex items-end">
             <span className="w-32 font-bold text-sm">Nationality-</span>
+            
           </div>
           <div className="flex items-end">
             <span className="w-32 font-bold text-sm">Occupation-</span>
+            
           </div>
           <div className="flex items-end">
             <span className="w-40 font-bold text-sm">Date of Admission-</span>
+           
           </div>
           <div className="flex items-end">
             <span className="w-40 font-bold text-sm">Date of Discharge-</span>
+          
           </div>
           <div className="flex items-end">
             <span className="w-48 font-bold text-sm">Date of Referral/Death-</span>
+            
           </div>
         </div>
 
+        {/* Signature of Medical Officer - Positioned Above Signatures */}
+        <div className="flex justify-end mb-1">
+          <span className="text-xs font-bold">Signature of Medical Officer</span>
+        </div>
+
         {/* Mid Signatures */}
-        <div className="flex justify-between my-4 px-4">
+        <div className="flex justify-between mb-3 px-4">
           <div className="">
             <span className="w-48 font-bold text-sm">SIGNATURE OF PATIENT</span>
           </div>
@@ -183,24 +185,27 @@ const BedHeadTicket = () => {
           </div>
         </div>
 
-        <hr className="border-t-2 border-green-700 my-2" />
+        <hr className="border-t-2 border-green-700 my-4" />
 
         {/* Medical History */}
-        <div className="space-y-2">
+        <div className="space-y-3 mb-4">
           <div>
-            <span className="block font-bold text-sm mb-0.5 text-left">Chief complaint &gt;</span>
+            <span className="block font-bold text-sm mb-1 text-left">Chief complaint &gt;</span>
+            
           </div>
           <div>
-            <span className="block font-bold text-sm mb-0.5 text-left">Past history with treatment history ( if any ) &gt;</span>
+            <span className="block font-bold text-sm mb-1 text-left">Past history with treatment history ( if any ) &gt;</span>
+           
           </div>
           <div>
-            <span className="block font-bold text-sm mb-0.5 text-left">Family history ( if any ) &gt;</span>
+            <span className="block font-bold text-sm mb-1 text-left">Family history ( if any ) &gt;</span>
+            
           </div>
         </div>
 
         {/* Menstrual History */}
-        <div className="mt-2">
-          <span className="block font-bold text-sm mb-1 text-left">Menstrual history &gt;</span>
+        <div className="mt-4">
+          <span className="block font-bold text-sm mb-2 text-left">Menstrual history &gt;</span>
           <div className="flex justify-between gap-6">
             <div className="flex items-end flex-1"><span className="font-bold text-sm mr-2">CYCLE</span></div>
             <div className="flex items-end flex-1"><span className="font-bold text-sm mr-2">LMP</span></div>
@@ -209,35 +214,35 @@ const BedHeadTicket = () => {
         </div>
 
         {/* Obstetric History */}
-        <div className="mt-2">
-          <span className="block font-bold text-sm mb-1 text-left">Obstetric history &gt;</span>
+        <div className="mt-4">
+          <span className="block font-bold text-sm mb-2 text-left">Obstetric history &gt;</span>
           <div className="grid grid-cols-5 gap-4">
             <div className="flex items-end"><span className="font-bold text-sm mr-1">GRAVIDA</span></div>
             <div className="flex items-end"><span className="font-bold text-sm mr-1">PARA</span></div>
             <div className="flex items-end"><span className="font-bold text-sm mr-1">ABORTION</span></div>
             <div className="flex items-end"><span className="font-bold text-sm mr-1">ECTOPIC</span></div>
-            <div className="flex items-end col-span-1"><span className="font-bold text-sm mr-1 text-[10px] md:text-xs whitespace-nowrap">LIVING CHILDREN</span><div className="flex-grow border-b border-black h-5"></div></div>
+            <div className="flex items-end col-span-1"><span className="font-bold text-sm mr-1 text-[10px] md:text-xs whitespace-nowrap">LIVING CHILDREN</span></div>
           </div>
         </div>
 
         {/* Other History */}
-        <div className="mt-2 mb-4">
-          <span className="block font-bold text-sm mb-0.5 text-left">Other history &gt;</span>
+        <div className="mt-4 mb-4">
+          <span className="block font-bold text-sm mb-1 text-left">Other history &gt;</span>
+          {/* <div className="w-full border-b border-black h-6"></div> */}
         </div>
 
-        {/* --- O/E SECTION (Placed here, Left Aligned) --- */}
-        <div className="mb-4">
-          {/* Changed text-center to text-left */}
-          <div className="text-left font-bold text-lg mb-2">O/E</div>
-          <div className="grid grid-cols-4 gap-x-6 gap-y-4">
-            <div className="flex items-end"><span className="font-bold text-sm mr-2">Paller</span><div className="flex-grow border-b border-black h-5"></div></div>
-            <div className="flex items-end"><span className="font-bold text-sm mr-2">Icterus</span><div className="flex-grow border-b border-black h-5"></div></div>
-            <div className="flex items-end"><span className="font-bold text-sm mr-2">Oedema</span><div className="flex-grow border-b border-black h-5"></div></div>
-            <div className="flex items-end"><span className="font-bold text-sm mr-2">Temp</span><div className="flex-grow border-b border-black h-5"></div></div>
-            <div className="flex items-end"><span className="font-bold text-sm mr-2">Bp</span><div className="flex-grow border-b border-black h-5"></div></div>
-            <div className="flex items-end"><span className="font-bold text-sm mr-2">Pulse</span><div className="flex-grow border-b border-black h-5"></div></div>
-            <div className="flex items-end"><span className="font-bold text-sm mr-2">Spo2</span><div className="flex-grow border-b border-black h-5"></div></div>
-            <div className="flex items-end"><span className="font-bold text-sm mr-2">Chest</span><div className="flex-grow border-b border-black h-5"></div></div>
+        {/* --- O/E SECTION --- */}
+        <div className="mb-6">
+          <div className="text-left font-bold text-lg mb-3">O/E</div>
+          <div className="grid grid-cols-4 gap-x-6 gap-y-3">
+            <div className="flex items-end"><span className="font-bold text-sm mr-2">Paller</span></div>
+            <div className="flex items-end"><span className="font-bold text-sm mr-2">Icterus</span></div>
+            <div className="flex items-end"><span className="font-bold text-sm mr-2">Oedema</span></div>
+            <div className="flex items-end"><span className="font-bold text-sm mr-2">Temp</span></div>
+            <div className="flex items-end"><span className="font-bold text-sm mr-2">Bp</span></div>
+            <div className="flex items-end"><span className="font-bold text-sm mr-2">Pulse</span></div>
+            <div className="flex items-end"><span className="font-bold text-sm mr-2">Spo2</span></div>
+            <div className="flex items-end"><span className="font-bold text-sm mr-2">Chest</span></div>
           </div>
         </div>
 
@@ -257,65 +262,65 @@ const BedHeadTicket = () => {
         <div className="mb-6">
           <div className="flex items-end">
              <span className="font-bold text-sm mr-4 w-12 text-left">P/A</span>
-             <div className="flex-grow border-b border-black h-5"></div>
+             <div className="flex-grow "></div>
           </div>
-          <div className="w-full border-b border-black h-8"></div>
-          <div className="w-full border-b border-black h-8"></div>
+          <div className="flex-grow "></div>
+          <div className="flex-grow "></div>
         </div>
 
         {/* Others Section */}
         <div className="mb-6">
           <div className="flex items-end">
              <span className="font-bold text-sm mr-4 w-12 text-left">Others</span>
-             <div className="flex-grow border-b border-black h-5"></div>
+            
           </div>
-          <div className="w-full border-b border-black h-8"></div>
+          
         </div>
 
         {/* Previous Investigation */}
         <div className="mb-8">
           <span className="block font-bold text-sm mb-2 text-left">Previous investigation &gt;</span>
-          <div className="w-full border-b border-black h-6"></div>
-          <div className="w-full border-b border-black h-8"></div>
-          <div className="w-full border-b border-black h-8"></div>
+          <div className="w-full "></div>
+          <div className="w-full "></div>
+          <div className="w-full "></div>
         </div>
 
         {/* Present Investigation Grid */}
         <div className="mb-8">
            <div className="flex items-center mb-4">
               <span className="font-bold text-sm mr-2 text-left">Investigations done presently ( Dt</span>
-              <div className="w-24 border-b border-black h-5"></div>
+              <div className="w-24 "></div>
               <span className="font-bold text-sm ml-1">) &gt;</span>
            </div>
 
            <div className="grid grid-cols-3 gap-8 text-sm">
               {/* Column 1 */}
               <div className="space-y-3">
-                 <div className="flex justify-between"><span className="font-bold">HB :</span><div className="w-16 border-b border-black"></div></div>
-                 <div className="flex justify-between"><span className="font-bold">TLC :</span><div className="w-16 border-b border-black"></div></div>
-                 <div className="flex justify-between"><span className="font-bold">PLT :</span><div className="w-16 border-b border-black"></div></div>
-                 <div className="flex justify-between"><span className="font-bold">RBS :</span><div className="w-16 border-b border-black"></div></div>
-                 <div className="flex justify-between"><span className="font-bold">UREA :</span><div className="w-16 border-b border-black"></div></div>
-                 <div className="flex justify-between"><span className="font-bold">CREATININE :</span><div className="w-12 border-b border-black"></div></div>
-                 <div className="flex justify-between"><span className="font-bold">URINE : RE</span><div className="w-12 border-b border-black"></div></div>
-                 <div className="flex justify-end"><span className="font-bold mr-2">ME</span><div className="w-16 border-b border-black"></div></div>
+                 <div className="flex justify-between"><span className="font-bold">HB :</span><div className="w-16 "></div></div>
+                 <div className="flex justify-between"><span className="font-bold">TLC :</span><div className="w-16 "></div></div>
+                 <div className="flex justify-between"><span className="font-bold">PLT :</span><div className="w-16 "></div></div>
+                 <div className="flex justify-between"><span className="font-bold">RBS :</span><div className="w-16"></div></div>
+                 <div className="flex justify-between"><span className="font-bold">UREA :</span><div className="w-16 "></div></div>
+                 <div className="flex justify-between"><span className="font-bold">CREATININE :</span><div className="w-12 "></div></div>
+                 <div className="flex justify-between"><span className="font-bold">URINE : RE</span><div className="w-12 "></div></div>
+                 <div className="flex justify-between pl-13"><span className="font-bold ">ME</span><div className="w-16 "></div></div>
               </div>
 
               {/* Column 2 */}
               <div className="space-y-3">
-                 <div className="flex justify-between"><span className="font-bold">HBSAG :</span><div className="w-16 border-b border-black"></div></div>
-                 <div className="flex justify-between"><span className="font-bold">HIV :</span><div className="w-16 border-b border-black"></div></div>
-                 <div className="flex justify-between"><span className="font-bold">BT :</span><div className="w-16 border-b border-black"></div></div>
-                 <div className="flex justify-between"><span className="font-bold">CT :</span><div className="w-16 border-b border-black"></div></div>
-                 <div className="flex justify-between"><span className="font-bold">SGPT :</span><div className="w-16 border-b border-black"></div></div>
-                 <div className="flex justify-between"><span className="font-bold">SGPT :</span><div className="w-16 border-b border-black"></div></div>
+                 <div className="flex justify-between"><span className="font-bold">HBSAG :</span><div className="w-16 "></div></div>
+                 <div className="flex justify-between"><span className="font-bold">HIV :</span><div className="w-16 "></div></div>
+                 <div className="flex justify-between"><span className="font-bold">BT :</span><div className="w-16 "></div></div>
+                 <div className="flex justify-between"><span className="font-bold">CT :</span><div className="w-16 "></div></div>
+                 <div className="flex justify-between"><span className="font-bold">SGPT :</span><div className="w-16 "></div></div>
+                 <div className="flex justify-between"><span className="font-bold">SGPT :</span><div className="w-16"></div></div>
               </div>
 
               {/* Column 3 */}
               <div className="space-y-3">
-                 <div className="flex justify-between"><span className="font-bold">LFT :</span><div className="w-16 border-b border-black"></div></div>
-                 <div className="flex justify-between"><span className="font-bold">BILIRUBIN (T):</span><div className="w-12 border-b border-black"></div></div>
-                 <div className="flex justify-between"><span className="font-bold">BILIRUBIN (D):</span><div className="w-12 border-b border-black"></div></div>
+                 <div className="flex justify-between"><span className="font-bold">LFT :</span><div className="w-16 "></div></div>
+                 <div className="flex justify-between"><span className="font-bold">BILIRUBIN (T):</span><div className="w-12 "></div></div>
+                 <div className="flex justify-between"><span className="font-bold">BILIRUBIN (D):</span><div className="w-12 "></div></div>
               </div>
            </div>
         </div>
@@ -332,14 +337,14 @@ const BedHeadTicket = () => {
         </div>
 
         {/* RX Space */}
-        {/* <div className="w-full h-32 border border-gray-300 mb-6"></div> */}
+        <div className="w-full h-32 border border-gray-300 mb-6"></div>
 
         {/* Pre-Operative Medication */}
         <div className="mb-12">
-          <span className="block font-bold text-sm mb-2 uppercase text-left">Pre- Operative Medication &gt;</span>
-          {/* <div className="w-full border-b border-black h-8"></div> */}
-          {/* <div className="w-full border-b border-black h-8"></div> */}
-          {/* <div className="w-full border-b border-black h-8"></div> */}
+          <span className="block font-bold text-sm mb-2 uppercase p-20">Pre- Operative Medication &gt;</span>
+          <div className="w-full "></div>
+          <div className="w-full "></div>
+          <div className="w-full "></div>
         </div>
 
         {/* Page 2 Final Signature */}
